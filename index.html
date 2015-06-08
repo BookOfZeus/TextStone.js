@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<script src="https://ajax.googleapi.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- should load this dynamically? -->
+	<script src="playable_class.js"></script>
+	<script src="user.js"></script>
+
 </head>
 
 <body>
-<div>TextStone</div>
-<button class="button" onclick="begin();">Start</button>
-</body>
 
+<h1>TextStone</h1>
+
+<div id="playerChoice"></div>
+
+<h2 id="user">Your Class: <span></span></h2>
+
+<h2 id="computer">Computer Class: <span></span></h2>
+
+<button id="ready">Start</button>
+
+
+<!-- Libs -->
+<script src="TextStone.js"></script>
+
+</body>
 </html>
