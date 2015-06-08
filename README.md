@@ -1,2 +1,2 @@
 # TextStone.js
-Viva Hearthstone! ... in text???
+Viva Hearthstone! ... via text???
