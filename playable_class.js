@@ -3,10 +3,9 @@
  *
  * Playable Class Object
  */
-
-var CLASS_MAGE 	= 0;
+var CLASS_MAGE		= 0;
 var CLASS_SHAMAN	= 1;
-var CLASS_WARLOCK = 2;
+var CLASS_WARLOCK	= 2;
 var CLASS_HUNTER	= 3;
 var CLASS_PRIEST	= 4;
 var CLASS_ROGUE	= 5;
@@ -24,30 +23,33 @@ var CLASS_DRUID_NAME		= "Druid";
 var CLASS_WARRIOR_NAME	= "Warrior";
 var CLASS_PALADIN_NAME	= "Paladin";
 
-var Person = function (a) {
-  console.log('instance created ' + a);
-};
-
-
+/**
+ * PlayableClass
+ */
 var PlayableClass = function() {
 }
 
-PlayableClass.prototype.getList= function() {
+/**
+ * PlayableClass.getList(): Get the list of all available classes
+ */
+PlayableClass.prototype.getList = function() {
 
-	var cls = Array(
-		CLASS_MAGE		= CLASS_MAGE_NAME,
-		CLASS_SHAMAN	= CLASS_SHAMAN_NAME,
-		CLASS_WARLOCK	= CLASS_WARLOCK_NAME,
-		CLASS_HUNTER	= CLASS_HUNTER_NAME,
-		CLASS_PRIEST	= CLASS_PRIEST_NAME,
-		CLASS_ROGUE		= CLASS_ROGUE_NAME,
-		CLASS_DRUID		= CLASS_DRUID_NAME,
-		CLASS_WARRIOR	= CLASS_WARRIOR_NAME,
-		CLASS_PALADIN	= CLASS_PALADIN_NAME
-	);
+	var cls = Array();
+	cls[CLASS_MAGE]		= CLASS_MAGE_NAME;
+	cls[CLASS_SHAMAN]		= CLASS_SHAMAN_NAME;
+	cls[CLASS_WARLOCK]	= CLASS_WARLOCK_NAME;
+	cls[CLASS_HUNTER]		= CLASS_HUNTER_NAME;
+	cls[CLASS_PRIEST]		= CLASS_PRIEST_NAME;
+	cls[CLASS_ROGUE]		= CLASS_ROGUE_NAME;
+	cls[CLASS_DRUID]		= CLASS_DRUID_NAME;
+	cls[CLASS_WARRIOR]	= CLASS_WARRIOR_NAME;
+	cls[CLASS_PALADIN]	= CLASS_PALADIN_NAME;
 	return cls;
 }
 
+/**
+ * PlayableClass.getName(): Get the name of the class
+ */
 PlayableClass.prototype.getName = function(id) {
 	var list = this.getList();
 	if(typeof list[id] === 'undefined') {
@@ -56,6 +58,9 @@ PlayableClass.prototype.getName = function(id) {
 	return list[id];
 }
 
+/**
+ * PlayableClass.chooseRandom(): Get a random class
+ */
 PlayableClass.prototype.chooseRandom = function() {
 	var list = this.getList();
 	var rnd = Math.floor(Math.random() * list.length);

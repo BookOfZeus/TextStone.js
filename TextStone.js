@@ -4,10 +4,6 @@
  * Core file
  */
 
-//
-// Events
-//
-
 var user = new User();
 var computer = new User();
 
